@@ -258,4 +258,9 @@
 //     console.log("Invalid day");
 // }
 
-console.log(10 > 5 ? "10 is greater" : "5 is greater");
+// console.log(10 > 5 ? "10 is greater" : "5 is greater");
+// const name = prompt(
+//   "Refactor conditional statements section for clarity and consistency"
+// );
+
+// console.log(name);
