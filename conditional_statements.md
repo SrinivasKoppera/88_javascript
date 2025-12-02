@@ -12,7 +12,7 @@ JavaScript works the same way.
 
 if
 if…else
-if…else if…else
+else if
 Nested if
 switch…case
 Ternary operator condition ? true-case : false-case
