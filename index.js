@@ -264,3 +264,75 @@
 // );
 
 // console.log(name);
+
+// console.log(1);
+// console.log(2);
+// console.log(3);
+// console.log(4);
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
+
+// let i = 1;
+
+// while (i <= 10) {
+//   console.log(i);
+//   i++;
+// }
+
+// let i = 1;
+
+// do {
+//   console.log(i);
+//   i++;
+// } while (i <= 10);
+
+// let password;
+
+// do {
+//   password = prompt("Enter password:");
+// } while (!password);
+
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York",
+//   phoneNumber: "123-456-7890",
+//   email: "john@example.com",
+// };
+
+// for (const key in person) {
+//   console.log(`${key}: ${person[key]}`);
+// }
+
+// const names = ["Srinivas", "Ravi", "Kumar"];
+
+// for (const name of names) {
+//   console.log(name);
+// }
+
+// const string = "Srinivas";
+
+// for (let char of "JavaScript") {
+//   console.log(char);
+// }
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// numbers.forEach((num) => console.log(num));
+
+// for (let i = 1; i <= 5; i++) {
+//   if (i === 3) {
+//     break;
+//   }
+//   console.log(i);
+// }
+
+// for (let i = 1; i <= 5; i++) {
+//   let pattern = "";
+//   for (let j = 1; j <= i; j++) {
+//     pattern += "* ";
+//   }
+//   console.log(pattern);
+// }
