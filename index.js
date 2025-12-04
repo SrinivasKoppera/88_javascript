@@ -336,3 +336,82 @@
 //   }
 //   console.log(pattern);
 // }
+
+// const arr = new Array(5);
+// const arr1 = [1, 2, 3, 4, 5, "srinivas", true];
+
+// console.log(arr1.length);
+
+// // console.log(typeof arr);
+// // Array values accessing
+// console.log(arr1[4]);
+
+// // Array Updation
+// arr1[4] = "Ravi";
+
+// Array methods
+
+const numbers = [10, 20, 30, 40, 50, 60, 70];
+
+// 1. push
+// numbers.push(90);
+// console.log(numbers);
+
+// // 2. pop
+// numbers.pop();
+// console.log(numbers);
+
+// // 3. unshift
+// numbers.unshift(5);
+// console.log(numbers);
+
+// // 4. shift
+// numbers.shift();
+// console.log(numbers);
+
+// // 5. indexOf
+// const index = numbers.indexOf(100);
+// console.log(index);
+
+// //6. includes
+// const isAvailable = numbers.includes(130);
+// console.log(isAvailable);
+
+// // 7. slice
+
+// const slicedArray = numbers.slice(2, 5);
+// console.log(slicedArray);
+
+// // 8. splice
+// const splicedArray = numbers.splice(2, 1, 100);
+
+// console.log(numbers);
+
+// for (let i = 0; i < numbers.length; i++) {
+//   console.log(numbers[i]);
+// }
+
+// 1. forEach
+// const forEachMethod = numbers.forEach((num) => num * 2);
+// console.log(forEachMethod);
+
+// // 2. map
+// const mapMethod = numbers.map((num) => num * 1);
+// console.log(mapMethod);
+
+// // 3. filter
+
+// const filterMethod = numbers.filter((num) => num > 50);
+// console.log(filterMethod);
+
+// // 4. reduce
+const reduceMethod = numbers.reduce((a, b) => a + b);
+console.log(reduceMethod);
+
+// const first = 0 +10 => 10
+// const second = 10 + 20 =>30
+// const third = 30 + 30 =>60
+// const fourth = 60 + 40 =>100
+// const fifth = 100 + 50 =>150
+// const sixth = 150 + 60 =>210
+// const seventh = 210 + 70 =>280
