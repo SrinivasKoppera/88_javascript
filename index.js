@@ -405,8 +405,8 @@ const numbers = [10, 20, 30, 40, 50, 60, 70];
 // console.log(filterMethod);
 
 // // 4. reduce
-const reduceMethod = numbers.reduce((a, b) => a + b);
-console.log(reduceMethod);
+// const reduceMethod = numbers.reduce((a, b) => a + b);
+// console.log(reduceMethod);
 
 // const first = 0 +10 => 10
 // const second = 10 + 20 =>30
@@ -415,3 +415,141 @@ console.log(reduceMethod);
 // const fifth = 100 + 50 =>150
 // const sixth = 150 + 60 =>210
 // const seventh = 210 + 70 =>280
+
+// const person = {
+//   name: "Srinivas",
+//   age: 30,
+//   city: "New York",
+//   phoneNumber: "123-456-7890",
+//   email: "srinivas@example.com",
+//   address: {
+//     street: "123 Main St",
+//     city: "New York",
+//     state: "NY",
+//     zip: "10001",
+//   },
+//   getFullName: function () {
+//     return this.name;
+//   },
+//   hobbies: ["reading", "traveling", "coding"],
+// };
+
+// // console.log(person);
+
+// const user = new Object();
+// user.name = "Ravi";
+// user.age = 28;
+// user.city = "Los Angeles";
+// // console.log(user);
+
+// function GreetUser(name, age, email) {
+//   this.name = name;
+//   this.age = age;
+//   this.email = email;
+// }
+
+// const user1 = new GreetUser("Kumar", 32, "kumar@example.com");
+
+// // console.log(user1);
+
+// class Person {
+//   constructor(name, age, email) {
+//     this.name = name;
+//     this.age = age;
+//     this.email = email;
+//   }
+// }
+
+// const person1 = new Person("Anil", 29, "anil@example.com");
+
+// console.log(person1);
+
+// const person = {
+//   name: "Srinivas",
+//   age: 30,
+//   city: "New York",
+//   phoneNumber: "123-456-7890",
+//   email: "srinivas@example.com",
+//   "first name": "Ravi",
+//   address: {
+//     street: "123 Main St",
+//     city: "New York",
+//     state: "NY",
+//     zip: "10001",
+//   },
+//   getFullName: function () {
+//     console.log(this);
+//   },
+//   hobbies: ["reading", "traveling", "coding"],
+// };
+
+// console.log(person.name, person.age);
+// console.log(person.address.city);
+// console.log(person.first name)
+
+// console.log(person["phoneNumber"]);
+// console.log(person["first name"]);
+
+// console.log(Object.values(person));
+
+// for (const key in person) {
+//   console.log(`${key}: ${person[key]}`);
+// }
+
+// person.password = "12345"; // Add new property
+// person.age = 31; // Update existing property
+
+// delete person.phoneNumber; // Delete property
+
+// console.log(person);
+
+// CRUD Operations
+
+// let products = [
+//   { id: 1, name: "Mobile", price: 12000 },
+//   { id: 2, name: "Laptop", price: 45000 },
+//   { id: 3, name: "TV", price: 30000 },
+// ];
+
+// for (const product of products) {
+//   console.log(product);
+//   console.log("--------------------");
+// }
+
+// const expensiveProducts = products.findIndex(
+//   (product) => product.name === "TV"
+// );
+
+// console.log(expensiveProducts);
+
+// let highPriceProduct = 0;
+
+// for (let i = 0; i < products.length; i++) {
+//   if (products[i].price > highPriceProduct) {
+//     highPriceProduct = products[i].price;
+//   }
+// }
+
+// console.log(highPriceProduct);
+
+const person = {
+  name: "Srinivas",
+  age: 30,
+  city: "New York",
+  phoneNumber: "123-456-7890",
+  email: "srinivas@example.com",
+  "first name": "Ravi",
+  address: {
+    street: "123 Main St",
+    city: "New York",
+    state: "NY",
+    zip: "10001",
+  },
+  getFullName: function () {
+    console.log(this);
+  },
+  hobbies: ["reading", "traveling", "coding"],
+};
+
+console.log(this);
+person.getFullName();

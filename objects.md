@@ -1,9 +1,7 @@
-1. What Is an Object? (Trainer Explanation)
+1. What Is an Object?
 
 An object is a collection of key–value pairs where:
-
 Key = property name
-
 Value = data or function
 
 Example:
@@ -31,6 +29,7 @@ Example from real-world:
 
 Product:
 name, price, brand, stock
+
 User:
 name, email, role
 
@@ -187,8 +186,10 @@ Correct:
 user[key]
 
 ❌ Not understanding reference behavior:
+
 let a = {name: "Ram"};
 let b = a;
+
 b.name = "Shyam";
 console.log(a.name); // Shyam
 

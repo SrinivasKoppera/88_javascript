@@ -1,4 +1,4 @@
-1. What Is an Array? (Trainer Explanation)
+1. What Is an Array?
 
 An Array is an ordered list of values.
 Values are stored by index starting from 0.
