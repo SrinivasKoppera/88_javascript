@@ -532,24 +532,109 @@ const numbers = [10, 20, 30, 40, 50, 60, 70];
 
 // console.log(highPriceProduct);
 
+// const person = {
+//   name: "Srinivas",
+//   age: 30,
+//   city: "New York",
+//   phoneNumber: "123-456-7890",
+//   email: "srinivas@example.com",
+//   "first name": "Ravi",
+//   address: {
+//     street: "123 Main St",
+//     city: "New York",
+//     state: "NY",
+//     zip: "10001",
+//   },
+//   getFullName: function () {
+//     console.log(this);
+//   },
+//   hobbies: ["reading", "traveling", "coding"],
+// };
+
+// console.log(this);
+// person.getFullName();
+
+// function greet(n) {
+//   return "Hello " + n; // API call to greet the name
+// }
+
+// console.log(name());
+
+// function name() {
+//   const fullName = "Srinivas"; // API call to get the name
+//   return greet(fullName);
+// }
+
+// console.log(name(2, 3));
+// console.log(name(10, 20));
+// console.log(name("Srinivas ", "Kumar"));
+
+// add(10, 20);
+
+// const add = function (a, b, ...rest) {
+//   console.log(rest);
+//   return a + b + rest;
+//   console.log("Function executed");
+// };
+
+// console.log(add(10, 20));
+
+// const a = 10;
+
+// const multiply = (a) => console.log(a * 2);
+
+// multiply();
+
+// console.log(multiply());
+
+// let number = [1, 2, 3, 4];
+// let doubled = number.map((num) => num * 2);
+// console.log(doubled);
+
+// function processUserInput(a) {
+//   let name = "Ravi";
+//   a(name);
+// }
+
+// processUserInput(function (n) {
+//   console.log("Hello " + n);
+// });
+
+// HOF
+// function processUserInput(callbackFunction) {
+//   let name = "Ravi";
+//   callbackFunction(name);
+// }
+
+// // Callback function
+// function callbackFunction(name) {
+//   console.log("Hello " + name);
+// }
+
+// processUserInput(callbackFunction);
+
+// (function () {
+//   console.log("Ravi");
+// })();
+
+// name();
+
 const person = {
-  name: "Srinivas",
+  name: "Ravi",
   age: 30,
-  city: "New York",
-  phoneNumber: "123-456-7890",
-  email: "srinivas@example.com",
-  "first name": "Ravi",
-  address: {
-    street: "123 Main St",
-    city: "New York",
-    state: "NY",
-    zip: "10001",
-  },
-  getFullName: function () {
-    console.log(this);
-  },
-  hobbies: ["reading", "traveling", "coding"],
+  email: "abc@gmail.com",
 };
 
-console.log(this);
-person.getFullName();
+// let name = "Ravi";
+// let age = 30;
+// let email = "abc@gmail.com";
+
+// function name(person) {
+//   console.log(person.name);
+// }
+
+// name(person);
+
+// const arr = [1, 2, 3, 4, 5];
+
+// arr.forEach((num, indexNum) => console.log(indexNum + ": " + num));
