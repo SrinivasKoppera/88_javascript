@@ -12,13 +12,64 @@
         text-align: center;
         margin-top: 50px;
       }
+      .h1 {
+        color: blue;
+        background-color: lightgray;
+        padding: 20px;
+        border-radius: 10px;
+      }
     </style>
     <link rel="icon" href="favicon.ico" />
   </head>
   <body>
-    <h1>Welcome to My Web Page</h1>
-    <!-- <h1>Hello, World!</h1> -->
-    <script src="index.js"></script>
+    <h1 id="h1-tag" class="h1" onclick="changeColor()">
+      Welcome to My JavaScript Learning Page <span>Hello world</span>
+    </h1>
+    <div id="main-container"></div>
+    <input id="name-input" type="text" placeholder="Enter your name" />
+    <!-- <button>Submit</button> -->
+    <script>
+      // const h1Elements = document.getElementsByTagName("h1")[0];
+      // console.log(h1Elements);
+      // const h1ById = document.getElementById("h1-tag");
+      // h1ById.style.color = "red";
+      // h1ById.style.backgroundColor = "lightgray";
+      // h1ById.style.padding = "20px";
+      // h1ById.style.borderRadius = "10px";
+      // h1ById.classList.add("h1");
+      // console.log(h1ById);
+      // const h1ByClass = document.getElementsByClassName("h1")[0];
+      // console.log(h1ByClass);
+      // const h1ByQuery = document.querySelector(".h1");
+      // h1ByClass.textContent = "Hello, JavaScript!";
+      // const newHTML = `<span style='color:green;'> - Enjoy Learning!</span>`;
+      // h1ByQuery.innerHTML += newHTML;
+      // console.log(h1ByQuery.innerHTML);
+      // console.log(h1ByQuery);
+
+      const mainContainer = document.getElementById("main-container");
+      const container = document.createElement("div");
+      container.innerText = "This is a dynamically created div element.";
+      container.style.backgroundColor = "#d1e7dd";
+      container.style.padding = "15px";
+      container.style.marginTop = "20px";
+      container.style.borderRadius = "8px";
+      container.style.fontSize = "18px";
+      container.style.fontWeight = "bold";
+      mainContainer.appendChild(container);
+
+      const nameInput = document.getElementById("name-input");
+
+      nameInput.addEventListener("input", function (event) {
+        console.log("Input changed:", event.target.value);
+      });
+
+      function changeColor() {
+        const h1Tag = document.getElementById("h1-tag");
+        h1Tag.style.color = h1Tag.style.color === "blue" ? "green" : "blue";
+      }
+    </script>
+    <!-- <script src="index.js"></script> -->
     <!-- <script>
       document.write("Hello, World!");
       //   variable = 10;
