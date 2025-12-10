@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <h1>JavaScript Events</h1>
+    <!-- <button onclick="btnClicked()" onmouseover="btnMouseOver()">
+      Click me
+    </button> -->
+    <div id="parent" style="background-color: red; padding: 20px">
+      <div id="child" style="background-color: blue; padding: 20px">
+        <button id="btn">Click</button>
+      </div>
+    </div>
+
+    <ul id="my-list">
+      <li>One</li>
+      <li>two</li>
+      <li>Three</li>
+      <li>four</li>
+    </ul>
+
+    <form onsubmit="formSubmit(event)">
+      <input type="text" placeholder="Enter something" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- <button>Click me</button> -->
+    <script>
+      //   const btnEl = document.getElementsByTagName("button")[0];
+      //   btnEl.onclick = btnClicked;
+      //   function btnClicked(event) {
+      //     console.log("Button clicked - Onclick");
+      //     console.log(event.target);
+      //   }
+      //   btnEl.addEventListener("click", btnClicked);
+
+      //   function btnClicked() {
+      //     alert("Button was clicked!");
+      //   }
+
+      function formSubmit(event) {
+        event.preventDefault();
+        console.log("Form submission prevented.");
+      }
+
+      const parentEl = document.getElementById("parent");
+      const childEl = document.getElementById("child");
+      const buttonEl = document.getElementById("btn");
+
+      parentEl.addEventListener("click", function () {
+        console.log("Parent Div Clicked");
+        event.stopPropagation();
+      });
+
+      childEl.addEventListener("click", function () {
+        console.log("Child Div Clicked");
+        event.stopPropagation();
+      });
+
+      buttonEl.addEventListener("click", function () {
+        console.log("Button Clicked");
+        event.stopPropagation();
+      });
+
+      const listEl = document.getElementById("my-list");
+
+      function listItemClicked(event) {
+        if (event.target.tagName === "LI") {
+          console.log(
+            "List item clicked:",
+            event.target.tagName,
+            event.target.innerText
+          );
+        }
+        // console.log("List item clicked:", event.target.innerText);
+      }
+      listEl.addEventListener("click", listItemClicked);
+    </script>
+  </body>
+</html>
