@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .input-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      #todoInput {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      #addBtn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #addBtn:hover {
+        background-color: #45a049;
+      }
+      #todoList {
+        list-style: none;
+        padding: 0;
+      }
+      .todo-item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      .todo-item.completed span {
+        text-decoration: line-through;
+        color: #888;
+      }
+      .todo-item span {
+        flex: 1;
+        font-size: 16px;
+      }
+      .complete-btn {
+        padding: 5px 10px;
+        margin-right: 10px;
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .complete-btn:hover {
+        background-color: #1976d2;
+      }
+      .delete-btn {
+        padding: 5px 10px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .delete-btn:hover {
+        background-color: #d32f2f;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Todo App</h1>
+
+    <div class="input-container">
+      <input type="text" id="todoInput" placeholder="Enter a new todo..." />
+      <button id="addBtn">Add</button>
+    </div>
+
+    <ul id="todoList"></ul>
+
+    <script>
+      const todoInput = document.getElementById("todoInput");
+      const addBtn = document.getElementById("addBtn");
+      const todoList = document.getElementById("todoList");
+
+      function addTodo() {
+        const todoText = todoInput.value.trim();
+
+        if (todoText === "") {
+          alert("Please enter a todo item.");
+          return;
+        }
+
+        const liTag = document.createElement("li");
+        liTag.className = "todo-item";
+
+        liTag.innerHTML = `
+        <span>${todoText}</span>
+        <button class="complete-btn">Complete</button>
+        <button class="delete-btn">Delete</button>`;
+
+        todoList.appendChild(liTag);
+        todoInput.value = "";
+        todoInput.focus();
+      }
+
+      addBtn.addEventListener("click", addTodo);
+
+      todoInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          addTodo();
+        }
+      });
+
+      todoList.addEventListener("click", function (e) {
+        const item = e.target.closest(".todo-item");
+
+        if (e.target.classList.contains("complete-btn")) {
+          item.classList.toggle("completed");
+          e.target.textContent = item.classList.contains("completed")
+            ? "Undo"
+            : "Complete";
+        }
+
+        if (e.target.classList.contains("delete-btn")) {
+          item.remove();
+        }
+      });
+    </script>
+  </body>
+</html>
