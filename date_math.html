@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <h1>Date and Math in JavaScript</h1>
+  <script>
+    const currentDate = new Date();
+    const lastYear = new Date("2023-12-31");
+    console.log(lastYear);
+    console.log(currentDate.getFullYear());
+    console.log("Month", currentDate.getMonth());
+    console.log(currentDate.getDate());
+    console.log(currentDate.getHours());
+    console.log(currentDate.getMinutes());
+
+    // setTimeout(() => {
+    //   console.log("This message is shown after 3 seconds");
+    //   alert("3 seconds have passed!");
+    // }, 5000);
+
+    // let count = 0;
+    // const timer = setInterval(() => {
+    //   console.log("Interval running", count++);
+    // }, 1000);
+
+    // setTimeout(() => {
+    //   clearInterval(timer);
+    //   console.log("Interval cleared");
+    // }, 5000);
+
+    // const floatNum = 5.7789;
+    // console.log("Rounded Number:", Math.round(floatNum));
+    // console.log("Ceil Number:", Math.ceil(floatNum));
+    // console.log("Floor Number:", Math.floor(floatNum));
+    // console.log("Random Number:", Math.random() * 100);
+    // console.log("Random Number (1-100):", Math.floor(Math.random() * 100) + 1);
+    // console.log("Max Number:", Math.max(5, 10, 2, 8, 1));
+    // console.log("Min Number:", Math.min(5, 10, 2, 8, 1));
+    // console.log("Power:", Math.pow(2, 3));
+    // console.log("Square Root:", Math.sqrt(64));
+    // console.log("Absolute Value:", Math.abs(-50));
+    // console.log("PI Value:", Math.PI);
+
+    localStorage.setItem("name", "John Doe");
+    localStorage.setItem("age", "30");
+    const name = localStorage.getItem("name");
+    console.log("Name from localStorage:", name);
+    // localStorage.removeItem("name");
+    localStorage.clear();
+
+    sessionStorage.setItem("token", "abcd1234");
+
+    document.cookie =
+      "username=JaneDoe; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/";
+    console.log("Cookies:", document.cookie);
+
+    document.cookie =
+      "sessionId=xyz789; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/";
+  </script>
+</html>
