@@ -8,14 +8,14 @@
   <body></body>
   <h1>Date and Math in JavaScript</h1>
   <script>
-    const currentDate = new Date();
-    const lastYear = new Date("2023-12-31");
-    console.log(lastYear);
-    console.log(currentDate.getFullYear());
-    console.log("Month", currentDate.getMonth());
-    console.log(currentDate.getDate());
-    console.log(currentDate.getHours());
-    console.log(currentDate.getMinutes());
+    // const currentDate = new Date();
+    // const lastYear = new Date("2023-12-31");
+    // console.log(lastYear);
+    // console.log(currentDate.getFullYear());
+    // console.log("Month", currentDate.getMonth());
+    // console.log(currentDate.getDate());
+    // console.log(currentDate.getHours());
+    // console.log(currentDate.getMinutes());
 
     // setTimeout(() => {
     //   console.log("This message is shown after 3 seconds");
@@ -45,20 +45,77 @@
     // console.log("Absolute Value:", Math.abs(-50));
     // console.log("PI Value:", Math.PI);
 
-    localStorage.setItem("name", "John Doe");
-    localStorage.setItem("age", "30");
-    const name = localStorage.getItem("name");
-    console.log("Name from localStorage:", name);
-    // localStorage.removeItem("name");
-    localStorage.clear();
+    // localStorage.setItem("name", "John Doe");
+    // localStorage.setItem("age", "30");
+    // const name = localStorage.getItem("name");
+    // console.log("Name from localStorage:", name);
+    // // localStorage.removeItem("name");
+    // localStorage.clear();
 
-    sessionStorage.setItem("token", "abcd1234");
+    // sessionStorage.setItem("token", "abcd1234");
 
-    document.cookie =
-      "username=JaneDoe; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/";
-    console.log("Cookies:", document.cookie);
+    // document.cookie =
+    //   "username=JaneDoe; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/";
+    // console.log("Cookies:", document.cookie);
 
-    document.cookie =
-      "sessionId=xyz789; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/";
+    // document.cookie =
+    //   "sessionId=xyz789; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/";
+
+    // const person = {
+    //   name: "Alice",
+    //   age: 28,
+    //   city: "New York",
+    //   address: {
+    //     street: "123 Main St",
+    //     zip: "10001",
+    //   },
+    // };
+
+    // const person2 = Object.assign({}, person);
+
+    // const person3 = { ...person };
+
+    // console.log(person3.address === person.address);
+
+    // console.log(person.address === person2.address);
+
+    // person2.age = 29;
+
+    // console.log(person);
+
+    // console.log(person === person2);
+
+    // console.log("Person Object:", person);
+    // const jsonObj = JSON.stringify(person);
+    // localStorage.setItem("person", jsonObj);
+    // console.log("JSON String:", jsonObj);
+    // const parsedObj = JSON.parse(jsonObj);
+    // console.log("Parsed Object:", parsedObj);
+
+    const person = {
+      name: "Alice",
+      age: 28,
+      city: "New York",
+      address: {
+        street: "123 Main St",
+        zip: "10001",
+        aa: {
+          bb: {
+            cc: "Deep Value",
+          },
+        },
+      },
+      greet: function () {
+        console.log("Hello, ");
+      },
+    };
+
+    const deepClone = JSON.parse(JSON.stringify(person));
+    const deepClone2 = structuredClone(person);
+    console.log("Original Object:", deepClone2);
+    console.log(
+      "Deep Cloned Object:",
+      deepClone2.address.aa.bb.cc === person.address.aa.bb.cc
+    );
   </script>
 </html>
