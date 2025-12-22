@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Methods</title>
+  </head>
+  <body>
+    <h1>String Methods</h1>
+    <script>
+      const name = "  John Doe  ";
+      const name2 = "JOHN DOE";
+      console.log(name.toLowerCase() === name2.toLowerCase());
+      console.log(name.toUpperCase());
+      console.log(name.toLowerCase());
+      console.log(name.length);
+      const trimmedName = name.trim();
+      console.log(trimmedName.length);
+      let msg = "Welcome to JavaScript";
+
+      let fruits = "Apple,Banana,Mango,Orange";
+      let char = "Hello";
+
+      console.log(msg.includes("srinivas"));
+
+      console.log(msg.lastIndexOf("t"));
+      console.log(msg.indexOf("o"));
+      console.log(msg.slice(0, 7));
+
+      console.log(msg.split(" "));
+      console.log(fruits.split(","));
+      console.log(char.split(""));
+
+      console.log(msg.replace("JavaScript", "JS"));
+
+      console.log(msg.startsWith("Welcome"));
+      console.log(msg.endsWith("Welcome"));
+      console.log(char.charAt(4));
+      console.log(char.charCodeAt(4));
+
+      // Closures
+      //   const outerFunction = function (outerVariable) {
+      //     const counter = 0;
+      //     return function innerFunction(innerVariable) {
+      //       console.log(`Counter: ${counter}`);
+      //     };
+      //   };
+
+      //   //   console.log(counter); // Error: counter is not defined
+      //   const newFunction = outerFunction();
+      //   newFunction();
+
+      function outer() {
+        let count = 0;
+
+        function inner() {
+          count++;
+          console.log(count);
+        }
+
+        return inner;
+      }
+      const fn = outer();
+      fn(); // Output: 1
+      fn(); // Output: 2
+      fn(); // Output: 3
+
+      // Currying Example
+
+      function add(a) {
+        return function (b) {
+          return a + b;
+        };
+      }
+      const addFive = add(5);
+      console.log(addFive(3));
+
+      // Recursion Example
+
+      function countdown(n) {
+        if (n === 0) {
+          return;
+        }
+        console.log(n);
+        countdown(n - 1);
+      }
+
+      countdown(5);
+
+      function factorial(n) {
+        if (n === 1) return 1;
+        return n * factorial(n - 1);
+      }
+      // 5*4*3*2*1
+      console.log(factorial(5));
+    </script>
+  </body>
+</html>
