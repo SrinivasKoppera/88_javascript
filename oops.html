@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOPS</title>
+  </head>
+  <body>
+    <h1>Object-Oriented Programming System (OOPS)</h1>
+    <script>
+      const student1 = {
+        name: "John Doe",
+        age: 20,
+        major: "Computer Science",
+        greet: function () {
+          console.log("Hello, my name is " + this.name);
+        },
+      };
+      // const student2 = {
+      //   name: "John Doe",
+
+      //   age: 20,
+      //   major: "Computer Science",
+      //   greet: function () {
+      //     console.log("Hello, my name is " + this.name);
+      //   },
+      // };
+
+      // class Student {
+      //   constructor(name, age, major) {
+      //     this.name = name;
+      //     this.age = age;
+      //     this.major = major;
+      //   }
+      //   greet() {
+      //     console.log("Hello, my name is " + this.name);
+      //   }
+      // }
+
+      // const std1 = new Student("John Doe", 20, "Computer Science");
+      // const std2 = new Student("Jane Smith", 22, "Mathematics");
+      // const std3 = new Student("Alice Johnson", 19, "Physics");
+
+      // 1. Encapsulation
+      // class BankAccount {
+      //   constructor(balance) {
+      //     this.balance = balance;
+      //   }
+
+      //   deposit(amount) {
+      //     this.balance += amount;
+      //     console.log("Deposited:", amount);
+      //   }
+
+      //   withdraw(amount) {
+      //     if (amount <= this.balance) {
+      //       this.balance -= amount;
+      //       console.log("Withdrawn:", amount);
+      //     } else {
+      //       console.log("Insufficient balance");
+      //     }
+      //   }
+      // }
+
+      // const myAccount = new BankAccount(1000);
+      // myAccount.deposit(500);
+      // console.log("Current Balance:", myAccount.balance);
+
+      //   2. Inheritance
+
+      // class Vehicle {
+      //   constructor(name) {
+      //     this.name = name;
+      //   }
+      //   start() {
+      //     console.log("Vehicle started");
+      //   }
+      // }
+
+      // class Car extends Vehicle {
+      //   constructor(name, brand) {
+      //     super(name);
+      //     this.brand = brand;
+      //   }
+      //   drive() {
+      //     console.log("Car is driving");
+      //   }
+      // }
+
+      // class Bike extends Car {
+      //   ride() {
+      //     console.log("Bike is riding");
+      //   }
+      // }
+
+      // const myBike = new Car("MyCar", "Toyota");
+      // console.log(myBike);
+
+      // 3. Polymorphism
+
+      // class Animal {
+      //   speak() {
+      //     console.log("Animal speaks");
+      //   }
+      // }
+
+      // class Dog extends Animal {
+      //   speak() {
+      //     console.log("Dog barks");
+      //   }
+      // }
+
+      // class Cat extends Dog {
+      //   speak() {
+      //     super.speak();
+      //     // console.log("Cat meows");
+      //   }
+      // }
+
+      // const myCat = new Cat();
+      // const myDog = new Dog();
+
+      // myCat.speak();
+
+      // myDog.speak();
+
+      // class Car {
+      //   startEngine() {
+      //     this.injectFuel();
+      //     this.ignite();
+      //     console.log("Car started");
+      //   }
+
+      //   injectFuel() {
+      //     console.log("Fuel injected");
+      //   }
+
+      //   ignite() {
+      //     console.log("Engine ignited");
+      //   }
+      // }
+
+      // const myCar = new Car();
+      // myCar.startEngine();
+
+      // 1. Getters
+      // const obj = {
+      //   get getName() {
+      //     return "Srinivas";
+      //   },
+      // };
+
+      // console.log(obj.getName);
+
+      // 2. Setters
+      // const obj2 = {
+      //   set setName(name) {
+      //     console.log("Name set to:", name);
+      //   },
+      // };
+
+      // obj2.setName = "Srinivas";
+
+      // 1. public variables
+
+      // class Student {
+      //   constructor(name, age) {
+      //     this.name = name; // public
+      //     this.age = age; // public
+      //   }
+      // }
+
+      // const student = new Student("John Doe", 20);
+
+      // 2. private variables
+      // class Person {
+      // #ssn; // private variable
+
+      //   constructor(name, ssn) {
+      //     this.name = name; // public variable
+      //     this.#ssn = ssn; // private variable
+      //   }
+
+      //   withDraw(amount, pin) {
+      //     if (pin === this.#ssn) {
+      //       console.log("Withdrawn:", amount);
+      //     } else {
+      //       console.log("Invalid PIN");
+      //     }
+      //   }
+
+      //   getSSN() {
+      //     return this.#ssn;
+      //   }
+      // }
+
+      // const person = new Person("Jane Doe", "123-45-6789"); // SSN is private PIN SET UP
+      // console.log(person.name); // Accessible
+      // console.log(person.getSSN()); // Accessible via method
+      // person.withDraw(500, "123-45-678910"); // Valid PIN
+    </script>
+  </body>
+</html>
